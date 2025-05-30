@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>parent-child selector</title>
+  <style>
+    div > p {
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <p>This paragraph is a direct child of div and it will be blue and bold.</p>
+  </div>
+      <p>This paragraph is *not* a direct child of div and it will not be styled.</p>
+</body>
+</html>
