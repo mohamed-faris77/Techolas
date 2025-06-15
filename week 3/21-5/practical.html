@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventora</title>
+  <style>
+    body{
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+    }
+    .head{
+      text-align: center;
+      color: rgb(155, 153, 153);
+      background-color: rgb(255, 255, 255);
+    }
+    img{
+      margin: auto;
+      display: block;
+      /* margin-left: 600px;
+      margin-right: 600px; */
+      height: 400px;
+      width: 300px;
+      object-fit: contain;
+    }
+    video{
+      margin: auto;
+      display: block;
+      height: 500px;
+      width: 500px;
+      /* margin-left: 500px;
+      margin-right: 500px; */
+      object-fit: contain;
+      /* align-items: center; */
+    }
+    .media{
+      margin: auto;
+    }
+    marquee{
+      padding: 20px;
+      margin: 100px;
+    }
+    iframe{
+      padding: 50px;
+       /* margin-left: 500px;
+      margin-right: 500px; */
+      margin: auto;
+      display: block;
+
+    }
+    .list{
+      /* align-items: center;
+      text-align: center; */
+      margin-left: 650px;
+      margin-right: 650px;
+    }
+    .table{
+      /* align-items: center; */
+      text-align: center;
+      padding: 10px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      margin-left: 550px;
+      margin-right: 550px; 
+      /* margin: auto;
+      display: block; */
+    }
+  </style>
+</head>
+<body>
+  <div class="head">
+    <h1>Welcome to Eventora</h1>
+    <h1>"Eventora - Your Event, Our Responsibility!"</h1>
+    <hr>
+  </div>
+  <div class="media"></div>
+  <img src="../../Images/eventora.jpg" alt="Eventora" id="image">
+  <video src="../../Images/eventoravd.mp4" controls id="vid"></video>
+  <div class="yt">
+    <marquee>✨Book Now & Get 20% Off on Wedding Packages!✨"</marquee>
+    <iframe width="420" height="315"
+src="https://www.youtube.com/embed/uTKznA-gGY8">
+</iframe>
+<br>
+  </div>
+  <div class="list">
+    Eventora's core services:
+    <br>
+    <ol>
+      <li>Wedding Planning</li>
+      <li>Corporate Events</li>
+      <li>Birthday Parties</li>
+      <li>Product Launches</li>
+      <li>Virtual Events</li>
+    </ol>
+    <br>
+    Features included in every package:
+    <ul>
+      <li>Free Consutation</li>
+      <li>Custom Decoration</li>
+      <li>Catering Support</li>
+      <li>Photography & Videography</li>
+    </ul>
+  </div>
+  <div class="table">
+    <table border="2px">
+      <tr>
+        <th>Package Name</th>
+        <th>Event Type</th>
+        <th>Duration</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>Launches</td>
+        <td>Product Launches</td>
+        <td>1-3 days</td>
+        <td>₹79,999/-</td>
+      </tr>
+      <tr>
+        <td>Meet up</td>
+        <td>Corporate Events</td>
+        <td>1-2 days</td>
+        <td>₹69,999/-</td>
+      </tr>
+      <tr>
+        <td>Events</td>
+        <td>Birthday Events</td>
+        <td>1 day</td>
+        <td>₹49,999/-</td>
+      </tr>
+    </table>
+  </div>
+  <div class="form">
+    <form>
+      <fieldset>
+        <legend>Book your Event Now</legend>
+        <label for="fname">Full Name:</label>
+        <input type="text" name="fname"><br>
+        <label for="mail">Email:</label>
+        <input type="email" name="mail"><br>
+        <select>
+          <option>Wayanad</option>
+          <option>Malappuram</option>
+          <option>Ernakulam</option>
+          <option>Palakkad</option>
+        </select>
+        <br>
+        <label for="date"> Select event date:</label>
+        <input type="date" name="date"><br>
+        <label for="special_request">Special Requsts:</label>
+        <textarea name="special_request"></textarea>
+        <br>
+        <button>Submit</button><br>
+        <button>Reset</button>
+      </fieldset>
+    </form>
+  </div>
+  <br>
+  <div class="contact">
+    <a href="#"> Contact Us</a>
+  </div>
+</body>
+</html>

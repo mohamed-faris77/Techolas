@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    body{
+      background-color: rgb(234, 235, 236);
+    }
+    .whole{
+      background-color: rgb(249, 249, 249);
+      text-align: center;
+      margin: auto;
+      height: 450px;
+      width: 400px;
+      border:none;
+      box-shadow: 10px 10px 10px rgb(153, 152, 152) ;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+    .head{
+      text-align: center;
+      height: 70px;
+      margin: 0%;
+      padding: 20px;
+      font-size: 40px;
+      color: rgb(240, 240, 240);
+      font-weight: bolder;
+      /* border-color: black;
+      border-style: solid;*/
+      border-radius: 18px 18px 0 0; 
+      margin-bottom: 10px;
+      background-image: linear-gradient(to right, red,blue);
+    }
+    form{
+      text-align: center;
+    }
+    .inp{
+      width: 300px;
+      height: 30px;
+      padding: 10px;
+      border-radius: 30px;
+      margin-top: 20px;
+      font-size: large;
+      border-color: rgb(214, 213, 213);
+      border-width: 1px;
+      /* border-top: 1px; */
+    }
+    #pass{
+      margin-top: 10px;
+    }
+    .options{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    #btn{
+      padding: 10px;
+      width: 70%;
+      height:40px;
+      border-radius:20px ;
+      background-image: linear-gradient(to right, red,blue);
+      color: white;
+      font-size: larger;
+      border: none;
+    }
+    .signup{
+      margin-top: 20px;
+    }
+    a{
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="whole">
+    <div class="head">Login Form</div>
+      <form class="form">
+      <input type="email" placeholder="Email Address" class="inp" id="email"><br>
+      <input type="password" placeholder="Password" class="inp" required id="pass">
+      
+      <div class="options">
+        <label>
+          <input type="checkbox" name="remember"> Remember me
+        </label>
+        <a class="frgt" href="#">Forgot password?</a>
+      </div>
+
+      <button type="submit" id="btn">Login</button>
+      </form>
+    <div class="signup">
+      Not an user? <a href="#" class="frgt">Signup now</a>
+    </div>
+  </div>
+</body>
+</html>

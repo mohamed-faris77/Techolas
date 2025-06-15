@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login form</title>
+  <style>
+    body{
+      background-color: rgb(233, 233, 233);
+      
+    
+    }
+    .whole{
+      background-color: white;
+      height: 400px;
+      width: 500px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: rgb(133, 130, 130) 5px 5px 10px  ;
+    }
+    .head{
+      text-align: center;
+    }
+    h1{
+      color: rgb(59, 241, 59);
+      padding-top: 20px;
+      font-size: 35px;
+    }
+    .credentials{
+      padding: 10px;
+      color: rgb(93, 92, 92);
+    }
+    .uid{
+      font-weight: bold;
+      line-height: 15px;
+    }
+    .user{
+      width: 95%;
+      height: 25px;
+      border: solid grey 0.5px;
+      border-radius: 5px;
+
+    }
+    button{
+      width: 92%;
+      padding: 10px;
+      margin-left: 10px;
+      border: none;
+      background-color: rgb(3, 187, 3);
+      color: white;
+      border-radius: 10px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    button:hover{
+      color: rgb(219, 219, 219);
+      cursor: pointer;
+      background-color: rgb(8, 170, 8);
+    }
+    .account-creation{
+      text-align: center;
+    }
+    a{
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="whole">
+    <div class="head" >
+      <h1>GeeksforGeeks</h1>
+      <h2>Enter your login credentials</h2>
+    </div>
+    <form>
+    <div class="credentials">
+      <label for="uname" class="uid">Username:</label>
+      <br>
+      <input type="text" class="user" name="uname" placeholder="Enter your Username">
+      <br>
+      <label for="pass" class="uid">Password:</label>
+      <br>
+      <input type="password" name="pass" class="user" placeholder="Enter your Password">
+    </div>
+    <div class="submit">
+      <button>Submit</button>
+    </div>
+    </form>
+    <div class="account-creation">
+      Not registered? <a href="#"> Create an account</a>
+    </div>
+  </div>
+</body>
+</html>

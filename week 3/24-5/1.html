@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transform property</title>
+  <style>
+    .box{
+      height: 100px;
+      width: 100px;
+      padding: 10px;
+      background-color: salmon;
+      margin: 20px;
+      transition:  background-color 1s ease, transform 1.5s;
+    }
+    .one:hover{
+      transform: translate(50px,20px);
+      background-color: rgb(255, 25, 0);
+    }
+    .two:hover{
+      transform: rotate(75deg);
+      background-color: rgb(199, 23, 3);
+
+    }
+    .three:hover{
+      transform: scale(1.5,1.5);
+      background-color: rgb(135, 17, 4);
+
+    }
+    .four:hover{
+      transform: skew(20deg,20deg);
+      background-color: rgb(70, 8, 2);
+
+    }
+  </style>
+</head>
+<body>
+  <div class=" box one">Translate</div>
+  <div class=" box two">Rotate</div>
+  <div class="box three">Scale</div>
+  <div class="box four">Skew</div>
+</body>
+</html>
