@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex box</title>
+  <style>
+    .flex-container{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      background-color: rgb(175, 178, 181);
+      justify-content: center; 
+      /* align-items: center; */
+      align-content: center;
+      height: 600px;
+
+    }
+    .flex-container > div{
+      width: 100PX;
+      height: 100PX;
+      padding: 20px;
+      margin: 20px;
+      color: rgb(0, 0, 0);
+      background-color: salmon;
+    }
+    img{
+      width: 100PX;
+      height: 100PX;
+      padding: 20px;
+      margin: 20px;
+      }
+  </style>
+</head>
+<body>
+  <h3>Flex Container</h3>
+  <div class="flex-container">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+    <div>I</div>
+    <div>J</div>
+    <div>K</div>
+    <div>L</div>
+    <!-- <div><img src="../../Images/insta.png" alt="Bangalore"></div> -->
+  </div>
+</body>
+</html>

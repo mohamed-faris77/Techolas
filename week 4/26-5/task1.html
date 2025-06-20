@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Containers</title>
+  <style>
+    body{
+      background-image: linear-gradient(to right, rgb(155, 212, 235), rgb(114, 114, 249));
+    }
+    .container{
+      margin-top: 100px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .big{
+      height: 200px;
+      width: 300px;
+      object-fit: cover;
+      border-radius: 9px 9px 0 0;
+    }
+    .sub{
+      height: 450px;
+      width: 300px;
+      background-color: white;
+      /* border: rgb(10, 4, 4) solid 1px ; */
+      text-align: center;
+      /* margin: 10px; */
+      border-radius: 10px;
+    }
+    span{
+      margin-left: 5px;
+      border: none;
+      display: block;
+      background-color: chocolate;
+      width: 120px;
+      border-radius: 10px;
+    }
+    .spn1{
+      color: white;
+      background-image: linear-gradient(to bottom, blue, rgb(133, 133, 250));
+    }
+    .spn2{
+      color: white;
+      background-image: linear-gradient(to bottom, chocolate, rgb(173, 146, 126));
+    }
+    .spn3{
+      color: white;
+      background-image: linear-gradient(to bottom, red, rgb(245, 171, 171));
+    }
+    .small{
+      margin: 0;
+      margin-right: 0;
+      padding-left: 5px;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      /* display: inline; */
+      float: inline-start;
+    }
+    .down-text{
+      margin: 0;
+      padding-left: 20px;
+      border: 0;
+      display: inline;
+      font-weight: bolder;
+    }
+     .down-txt{
+      width: 50px;
+      margin: 0;
+      padding-left: 20px;
+      border: 0;
+      display: inline;
+      font-weight: 500;
+      color: gray;
+    }
+    .bottom{
+      text-align: left;
+    }
+    h2{
+      margin: 0;
+      margin-top: 10px;
+      padding: 0px;
+    }
+    .mid>p{
+      margin: 0;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      padding: 0;
+    }
+    /* #con1{
+      flex-shrink: 0;
+    } */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sub cont1" id="con1">
+      <div class="pic foto1">
+        <img src="../../Images/Alorica.jpg" alt="Eco Space" class="big">
+      </div>
+      <div class="mid">
+        <span class="spn1">Eco Space</span>
+        <h2>Alorica!</h2>
+        <p> Eco Space is a tech park located in Bellandur Bengaluru. The building shown in the picture is Block-9, where companies like Alorica, concentrix are located.</p>
+      </div>
+      <div class="bottom">
+         <img src="../../Images/1.jpg" alt="profile" class="small">
+        <p class="down-text">Faaris.k</p><br>
+        <p class="down-txt">2h ago</p>
+      </div>
+    </div>
+    <div class="sub cont2">
+      <div class="pic foto2">
+        <img src="../../Images/accenture.jpg" alt="Eco Space" class="big">
+      </div>
+      <div class="mid">
+        <span class="spn2">Accenture</span>
+        <h2>Accenture</h2>
+        <p>Accenture is one of the topmost It companies in the world, this Accenture is located in Eco Space Bellandur it is block 14 building in Eco Space tech park.</p>
+      </div>
+      <div class="bottom">
+        <img src="../../Images/1.jpg" alt="profile" class="small">
+        <p class="down-text">Faaaris.k</p><br>
+        <p class="down-txt">2h ago</p>
+      </div>
+    </div>
+    <div class="sub cont3">
+      <div class="pic foto3">
+        <img src="../../Images/ourbuilding.jpg" alt="Our Room" class="big">
+      </div>
+      <div class="mid">
+        <span class="spn3">Tower Building</span>
+        <h2>Tower Building</h2>
+        <p>This building is also known as tower building and it is located at Balaji layout 4th cross, Thammenahalli village, Soldevanahalli, Bangalore.</p>
+      </div>
+      <div class="bottom">
+         <img src="../../Images/1.jpg" alt="profile" class="small">
+        <p class="down-text">Faaaris.k</p><br>
+        <p class="down-txt">2h ago</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

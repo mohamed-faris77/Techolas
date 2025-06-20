@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex box</title>
+  <style>
+    .flex-container{
+      display: flex;
+      background-color: rgb(175, 178, 181);
+      height: 400px;
+      flex-wrap: wrap;
+      justify-content: center; 
+       align-content: center;
+
+    }
+    .flex-container>div{
+      background-color: salmon;
+      /* height: 200px; */
+      /* width: 100px; */
+       padding: 20px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Flex Container</h3>
+  <div class="flex-container">
+    <div style="order: 4;height: 200px;">A</div>
+    <div style="order: 2; height: 50px; align-self: center;">B</div>
+    <div style="order: 1;height: 200px;">C</div>
+    <!-- <div style="order: 3; flex-grow: 8;">D</div> -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <style>
+    .container{
+      background-color: white;
+      box-shadow: grey 5px 5px 10px;
+      border-radius: 5px;
+    }
+    body{
+      background-image: linear-gradient(to right, rgb(157, 157, 253) ,rgb(216, 216, 242));
+    }
+    .btn{
+      background-image: linear-gradient(to right, blueviolet, rgb(195, 148, 239));
+      border: none;
+      border-radius: 5px;
+    }
+     .btn:hover{
+      background-image: linear-gradient(to right,rgb(195, 148, 239), blueviolet );
+      border: none;
+    }
+    /* h1{
+      text-decoration: underline;
+      text-underline-position: 3char;
+    } */
+     /* .line{
+      width:15px;
+      height: 2px;
+      display: inline;
+      background-image: linear-gradient(to right,rgb(195, 148, 239), blueviolet );
+     } */
+   </style>
+</head>
+<body>
+  <div class="container mt-5 w-50 ">
+    <h1>Registration</h1>
+    <!-- <div class="line">line</div> -->
+ <div class="row">
+  <div class="col">
+    <label for="fname">Full name</label>
+    <input type="text" class="form-control" placeholder="Enter your name" aria-label="Full name" name="fname">
+  </div>
+  <div class="col">
+    <label for="uname">User name</label>
+    <input type="text" class="form-control" placeholder="Enter your username" aria-label="User name" name="uname">
+  </div>
+</div>
+
+ <div class="row">
+  <div class="col">
+    <label for="mail">Email</label>
+    <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email" name="mail">
+  </div>
+  <div class="col">
+    <label for="pnum">Phone Number</label>
+    <input type="number" class="form-control" placeholder="Enter your number" aria-label="Phone number" name="pnum">
+  </div>
+</div>
+
+ <div class="row">
+  <div class="col">
+    <label for="pass">Password</label>
+    <input type="password" class="form-control" placeholder="Enter your password" aria-label="Password" name="pass">
+  </div>
+  <div class="col">
+    <label for="cpass">Confirm Password</label>
+    <input type="password" class="form-control" placeholder="Confirm your password" aria-label="Confirm password" name="cpass">
+  </div>
+</div>
+<h2 class="mt-5">Gender</h2>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <label class="form-check-label" for="flexRadioDefault1">
+   Male
+  </label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+  <label class="form-check-label" for="flexRadioDefault2">
+   Female
+  </label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+  <label class="form-check-label" for="flexRadioDefault2">
+   Prefer not to say
+  </label>
+</div>
+<div class="w-100 p-3 d-grid gap-2">
+  <button class="btn btn-primary" type="button">Register</button>
+</div>
+</div>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

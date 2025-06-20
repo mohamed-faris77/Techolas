@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .profile{
+      height: 150px;
+      width: 150px;
+      border: 5px double white;
+      border-radius: 50%;
+      object-fit: cover;
+      padding: 10px;
+      position: absolute;
+      top: 20px;
+      left: 115px;
+      /* transform: translateX(-50%); */
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(255, 255, 254);
+    }
+    .whole{
+      margin: 100px;
+      background-color: rgb(255, 255, 255);
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+      height: 450px;
+      width: 400px;
+      overflow:hidden;
+      position: relative;
+      box-shadow: black 5px 5px 10px;
+      border-radius: 20px;
+    }
+    .top{
+      background-color: rgb(76, 76, 247);
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+    .bottom{
+      text-align: center;
+    }
+    .logo{
+      height: 35px;
+      width: 35px;
+      margin: 5px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    button{
+      color: white;
+      background-color: rgb(43, 113, 226);
+      border: none;
+      width: 100px;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 30px;
+    }
+    button:hover{
+      cursor: pointer;
+      color: black;
+      background-color: blue;
+    }
+    p{
+      display: inline;
+      margin: 10px;
+    }
+    h3{
+      color: rgb(151, 153, 153);
+      margin: 5px;
+    }
+    h2{
+     margin: 5px;
+     padding-top: 25px;
+     margin-top: 25px;
+    }
+   
+  </style>
+</head>
+<body> 
+  <div class="whole">
+    <div class="top">
+    </div>
+      <div> <img class="profile" src="../../Images/11.jpg" alt="Profile">
+    </div>
+    <div class="bottom">
+      <div>
+        <h2>Coder J</h2>
+        <h3>Youtuber & Blogger</h3>
+      </div>
+      <div>
+        <a href="https://x.com/home" target="_blank"> <img src="../../Images/X.png" alt="Twitter" class="logo"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="../../Images/insta.png" alt="Instagram" class="logo"></a>
+        <a href="https://www.facebook.com/" target="_blank"> <img src="../../Images/fb.png" alt="Facebook" class="logo"></a>
+        <a href="https://www.youtube.com/" target="_blank"><img src="../../Images/yt.png" alt="Youtube" class="logo"></a> 
+      </div>
+      <div>
+        <button>Subscribe</button>
+        <button>Message</button>
+      </div>
+      <div>
+       <p> 60k &#9825;</p>|
+       <p>20k&#128172;</p>|
+        <p>13k&#8617; </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
