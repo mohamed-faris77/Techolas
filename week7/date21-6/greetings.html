@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      alert(
+        "The available languages are English, Tamil, Malayalam, Hindi, Telugu and Kannada"
+      );
+      alert(
+        'Type "en" for English, "tm" for Tamil, "ml" for Malayalam, "hi" for Hindi, "te" for Telugu, and "ka" for Kannada'
+      );
+      
+      let lang = prompt("Enter your choice of language for greetings");
+      switch (lang) {
+        case "en":
+          document.write("Hello!");
+          break;
+        case "tm":
+          document.write("வணக்கம்!");
+          break;
+        case "ml":
+          document.write("നമസ്കാരം!");
+          break;
+        case "hi":
+          document.write("नमस्ते!");
+          break;
+        case "te":
+          document.write("నమస్కారం!");
+          break;
+        case "ka":
+          document.write("ನಮಸ್ಕಾರ!");
+          break;
+        default:
+          document.write("Language not supported");
+      }
+    </script>
+  </body>
+</html>
