@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let numbers=[10,20,3,5,70]
+    let result= numbers.filter(num => num>10);
+    console.log(result);
+
+
+    let result2=numbers.filter(num => num%2==0);
+    console.log(result2);
+    
+    let st=[
+    {name:"Faris",marks:85},
+    {name:"Nishitha",marks:95},
+    {name:"Hemadri",marks:75},
+    {name:"Mamatha",marks:85},];
+
+    let toprs=st.filter(st => st.marks>=80);
+    console.log(toprs);
+    
+    let names =["Alfaris","Alnishitha","mamatha","hemadri"];
+    let aNames = names.filter(name => name.startsWith("A"));
+    console.log(aNames);
+
+
+    let numb = [1,2,3,4,5];
+
+    let sum = numb.reduce(function(initial, final) {
+      return initial+final;
+    },0)
+    console.log(sum);
+    
+  </script>
+</body>
+</html>

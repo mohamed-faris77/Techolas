@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function reverse() {
+        let inp = prompt("Enter a string to reverse it");
+        let inpSplit = inp.split("");
+        let inpReverse = inpSplit.reverse();
+        let inpJoin = inpReverse.join("");
+        console.log("The reversed string is ",inpJoin);
+        
+        if (inp === inpJoin) {
+          console.log("The entered string is a Palindrome");
+        } else {
+          console.log("The entered string is not a palindrome");
+        }
+      }
+
+      reverse();
+    </script>
+  </body>
+</html>

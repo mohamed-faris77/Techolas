@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function reverse() {
+        let inp = prompt("Enter a string to reverse it");
+        let inpSplit = inp.split("");
+        let inpReverse = inpSplit.reverse();
+        let inpJoin = inpReverse.join("");
+        console.log(inpJoin);
+      }
+
+      reverse();
+    </script>
+  </body>
+</html>
