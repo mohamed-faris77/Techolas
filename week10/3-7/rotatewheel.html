@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rotating Wheel</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wheel {
+      width: 500px;
+      height: 500px;
+      background-image: url("wheel.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .rotate {
+      animation: rotateWheel 1s linear infinite;
+    }
+
+    @keyframes rotateWheel {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    button {
+      color: gray;
+      background-color: antiquewhite;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      width: 80px;
+      margin: 10px;
+      box-shadow: grey 5px 5px 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      color: black;
+      background-color: rgb(242, 197, 138);
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="wheel" class="wheel"></div>
+
+  <div>
+    <button onclick="wheelRotate()">Rotate</button>
+    <button onclick="wheelStill()">Still</button>
+  </div>
+
+  <script>
+    const wheel = document.getElementById("wheel");
+
+    function wheelRotate() {
+      wheel.classList.add("rotate");
+    }
+
+    function wheelStill() {
+      wheel.classList.remove("rotate");
+    }
+  </script>
+</body>
+</html>

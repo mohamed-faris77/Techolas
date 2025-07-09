@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #calC {
+        border: solid black 2px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        background-image: linear-gradient(to right, grey, white);
+      }
+
+      input {
+        width: 200px;
+        color: gray;
+        height: 50px;
+        font-size: xx-large;
+      }
+      button {
+        width: 40px;
+        margin: 5px;
+        color: gray;
+        background-color: rgb(212, 212, 212);
+      }
+      button:hover {
+        color: salmon;
+        background-color: grey;
+      }
+      #clrBtn {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calC">
+      <div>
+        <input type="text" id="prntScr" readonly />
+      </div>
+
+      <div>
+        <button onclick="toDisplay('7')">7</button>
+        <button onclick="toDisplay('8')">8</button>
+        <button onclick="toDisplay('9')">9</button>
+        <button onclick="toDisplay('/')">/</button>
+      </div>
+      <div>
+        <button onclick="toDisplay('6')">6</button>
+        <button onclick="toDisplay('5')">5</button>
+        <button onclick="toDisplay('4')">4</button>
+        <button onclick="toDisplay('*')">*</button>
+      </div>
+      <div>
+        <button onclick="toDisplay('3')">3</button>
+        <button onclick="toDisplay('2')">2</button>
+        <button onclick="toDisplay('1')">1</button>
+        <button onclick="toDisplay('-')">-</button>
+      </div>
+      <div>
+        <button onclick="toDisplay('0')">0</button>
+        <button onclick="toDisplay('.')">.</button>
+        <button onclick="calcul()">=</button>
+        <button onclick="toDisplay('+')">+</button>
+      </div>
+      <div>
+        <button id="clrBtn" onclick="clearScr()">Clear</button>
+      </div>
+    </div>
+    <script>
+      let outp = document.getElementById("prntScr");
+      function toDisplay(value) {
+        outp.value += value;
+      }
+
+      function clearScr() {
+        outp.value = "";
+      }
+
+      function calcul() {
+        try {
+          outp.value = eval(outp.value);
+        } catch (error) {
+          outp.value = "Error";
+        }
+      }
+      document.addEventListener("keydown", function (even) {
+        handleKey(even.key);
+      });
+
+      function handleKey(key) {
+        const keyValue = "1234567890+-/*.";
+        if (keyValue.includes(key)) {
+          toDisplay(key);
+        } else if (key === "Enter") {
+          calcul();
+        } else if (key === "Backspace") {
+          outp.value = outp.value.slice(0, -1);
+        } else if (key === "Escape") {
+          clearScr();
+        }
+      }
+    </script>
+  </body>
+</html>

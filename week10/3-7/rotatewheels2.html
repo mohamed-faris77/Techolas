@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f4f4;
+      }
+      .wheel {
+        width: 600px;
+        height: 600px;
+        background-image: url("wheel.webp");
+        background-repeat: no-repeat;
+        background-size: 500px 500px;
+        background-position: center;
+        animation: rotateWheel 1s linear infinite;
+      }
+
+      @keyframes rotateWheel {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      button {
+        color: gray;
+        background-color: antiquewhite;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        width: 80px;
+        margin: 5px;
+        box-shadow: grey 5px 5px 5px;
+      }
+      button:hover {
+        color: black;
+        background-color: rgb(242, 197, 138);
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wheel"></div>
+     <button onclick="wheelStill()">Still</button>
+     
+
+     <script>
+      function wheelStill() {
+         if ((document.body.style.backgroundImage ="url(wheel.webp")) 
+        {
+            document.body.style.backgroundImage ="url(rotatewheels2.html)";
+            document.body.style.backgroundRepeat = "no-repeat";
+        }
+      }
+     </script>
+    
+  </body>
+</html>

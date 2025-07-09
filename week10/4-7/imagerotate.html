@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img{
+      width: 400px;
+      height: 400px;
+    }
+    #imgwheel{
+      transition: transform 1s;
+    }
+    .rotate{
+      animation: rotatewheel 2s linear infinite;
+    }
+    @keyframes rotatewheel{
+      from{
+        transform: 0deg;
+      }
+      to{
+        transform:360deg
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="../3-7/wheel.webp" alt="Wheel" id="imgwheel">
+  <button id="spinBtn" onclick="toggleFan()">ON</button>
+  <script>
+    function toggleFan(){
+    let btnImg=document.getElementById("imgWheel");
+    let btnOff=document.getElementById("spinBtn")
+
+    if(btnImg.classList.contains("rotate")){
+      btnImg.classList.contains("rotate");
+      btnOff.textContent ="ON"
+    }
+    else{
+      btnImg.classList.add("rotate");
+      btnOff.textContent="OFF";
+    }
+    }
+  </script>
+</body>
+</html>

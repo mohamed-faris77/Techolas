@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<select id="course">
+  <option value="html">HTML</option>
+  <option value="css">CSS</option>
+  <option value="js">JavaScript</option>
+</select>
+<input type="text" name="" id="">
+
+  <script>
+    document.getElementById("course").addEventListener("change",function (e) {
+      alert("selected : " + e.target.value);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 8px;
+}
+button{
+  width: 70px;
+
+}
+    
+#div1 {
+    grid-column: span 3 / span 3;
+}
+
+#div2 {
+    grid-row-start: 2;
+}
+
+#div3 {
+    grid-row-start: 2;
+}
+
+#div4 {
+    grid-row-start: 2;
+}
+
+
+#div6 {
+    grid-row-start: 3;
+}
+
+#div7 {
+    grid-row-start: 3;
+}
+
+
+#div9 {
+    grid-row-start: 3;
+}
+
+#div10 {
+    grid-row-start: 4;
+}
+
+
+#div12 {
+    grid-row-start: 4;
+}
+
+#div13 {
+    grid-row-start: 4;
+}
+
+
+#div15 {
+    grid-row-start: 5;
+}
+
+#div16 {
+    grid-row-start: 5;
+}
+#div17{
+  grid-row-end: 5;
+}
+        
+  </style>
+</head>
+<body>
+  <div id="whole">
+  
+<div class="parent">
+    <div id="div1"><p></p></div>
+    <div id="div2"><button>9</button></div>
+    <div id="div3"><button>8</button></div>
+    <div id="div4"><button>7</button></div>
+    <div id="div5"><button>6</button></div>
+    <div id="div6"><button>5</button></div>
+    <div id="div7"><button>4</button></div>
+    <div id="div8"><button>3</button></div>
+    <div id="div9"><button>2</button></div>
+    <div id="div10"><button>1</button></div>
+    <div id="div11"><button>0</button></div>
+    <div id="div12"><button>.</button></div>
+    <div id="div13"><button>+</button></div>
+    <div id="div14"><button>-</button></div>
+    <div id="div15"><button>*</button></div>
+    <div id="div16"><button>/</button></div>
+    <div id="div17"><button>=</button></div>
+</div>
+    </div>
+</body>
+</html>

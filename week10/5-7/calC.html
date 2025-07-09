@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #whole {
+        border: solid black 1px;
+        height: px;
+        width: 500px;
+        padding: 20px;
+      }
+      .calC {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        gap: 8px;
+      }
+      button {
+        border: none;
+        color: grey;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        font-weight: bolder;
+      }
+      button:hover {
+        color: salmon;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+      input {
+        border: none;
+      }
+
+      #div1 {
+        grid-column: span 3 / span 3;
+        border: solid black 1px;
+        padding: 10px;
+        height: 50px;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+      }
+      #div2 {
+        grid-row-start: 2;
+        border: solid black 1px;
+        padding: 5px;
+      }
+
+      #div3 {
+        grid-row-start: 2;
+        border: solid black 1px;
+        padding: 10px;
+      }
+
+      #div4 {
+        grid-row-start: 2;
+        border: solid black 1px;
+        padding: 10px;
+      }
+      #div5 {
+        grid-row-start: 3;
+        border: solid black 1px;
+        padding: 10px;
+      }
+      #div6 {
+        grid-row-start: 3;
+        border: solid black 1px;
+        padding: 10px;
+      }
+      #div7 {
+        grid-row-start: 3;
+        border: solid black 1px;
+        padding: 10px;
+      }
+      #div8 {
+        grid-row-start: 4;
+        border: solid black 1px;
+        padding: 10px;
+      }
+      #div9 {
+        grid-row-start: 4;
+        border: solid black 1px;
+        padding: 10px;
+      }
+      #div10 {
+        grid-row-start: 4;
+        border: solid black 1px;
+        padding: 10px;
+      }
+      #div11 {
+        grid-row-start: 5;
+        border: solid black 1px;
+        padding: 10px;
+      }
+      #div12 {
+        grid-row-start: 5;
+        border: solid black 1px;
+        padding: 10px;
+      }
+      #div13 {
+        grid-row-start: 5;
+        border: solid black 1px;
+        padding: 10px;
+      }
+      #div14 {
+        grid-row-start: 6;
+        border: solid black 1px;
+        padding: 10px;
+      }
+      #div15 {
+        grid-row-start: 6;
+        border: solid black 1px;
+        padding: 10px;
+      }
+      #div16 {
+        grid-row-start: 6;
+        border: solid black 1px;
+        padding: 10px;
+      }
+      #div17 {
+        grid-column: span 2 / span 2;
+        border: solid black 1px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      #div18 {
+        grid-row-start: 7;
+        border: solid black 1px;
+        padding: 10px;
+        align-self: center;
+        border-radius: 8px;
+      }
+      .calC > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="whole">
+      <div class="calC">
+        <div id="div1"><input type="text" readonly /></div>
+        <div id="div2"><button onclick="addTodisplay('9')">9</button></div>
+        <div id="div3"><button onclick="addTodisplay('8')">8</button></div>
+        <div id="div4"><button onclick="addTodisplay('7')">7</button></div>
+        <div id="div5"><button onclick="addTodisplay('6')">6</button></div>
+        <div id="div6"><button onclick="addTodisplay('5')">5</button></div>
+        <div id="div7"><button onclick="addTodisplay('4')">4</button></div>
+        <div id="div8"><button onclick="addTodisplay('3')">3</button></div>
+        <div id="div9"><button onclick="addTodisplay('2')">2</button></div>
+        <div id="div10"><button onclick="addTodisplay('1')">1</button></div>
+        <div id="div11"><button onclick="addTodisplay('0')">0</button></div>
+        <div id="div12"><button onclick="addTodisplay('.')">.</button></div>
+        <div id="div13"><button onclick="addTodisplay('+')">+</button></div>
+        <div id="div14"><button onclick="addTodisplay('-')">-</button></div>
+        <div id="div15"><button onclick="addTodisplay('*')">*</button></div>
+        <div id="div16"><button onclick="addTodisplay('/')">/</button></div>
+        <div id="div17"><button onclick="calculateResult()">=</button></div>
+        <div id="div18"><button onclick="clearInput()">Clear</button></div>
+      </div>
+    </div>
+
+    <script>
+      let inputBox = document.querySelector("#div1 input");
+
+      function addTodisplay(val) {
+        inputBox.value += val; // appends to existing input
+      }
+
+      function clearInput() {
+        inputBox.value = ""; // clears the input
+      }
+
+      function calculateResult() {
+        try {
+          inputBox.value = eval(inputBox.value); // evaluate expression
+        } catch (error) {
+          inputBox.value = "Error"; // in case of invalid input
+        }
+      }
+
+      document.addEventListener("keydown", function(even){
+        keyz(even.key)
+      })
+      function keyz(key){
+        const keyVal='1234567890-+/*.';
+        if(keyVal.includes(key)){
+          addTodisplay(key)
+        }
+        else if(key === "Enter"){
+          calculateResult()
+        }
+        else if(key === "Escape"){
+          clearInput()
+        }
+        else if(key === "Backspace"){
+          inputBox.value = inputBox.value.slice(0,-1);
+        }
+      }
+
+
+      //resbox.textContent=inpbox.value
+    </script>
+  </body>
+</html>

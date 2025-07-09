@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button ondblclick="doubleClick()">Double Click</button>
+    <button onmouseover="mouseOver()">Mouse Over</button>
+    <button id="alrt">Alert</button>
+    <button id="box">On mouse Out</button>
+    <script>
+      function doubleClick() {
+        console.log("You double clicked");
+      }
+      function mouseOver() {
+        console.log("Mouse Over");
+      }
+      let alrt = document.getElementById("blur");
+      alrt.onclick = function () {
+        alert("blur");
+      };
+
+      let box = document.getElementById("box");
+      box.onmouseout = function () {
+        console.log("Mouse left the box!");
+      };
+    </script>
+  </body>
+</html>
