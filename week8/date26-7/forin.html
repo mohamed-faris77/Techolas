@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let student={name:"Faris", age:21,palce:"Gudalur"}
+
+    for(let obj in student){
+      console.log(obj + ":" + student[obj]); 
+    }
+//counting number of properties in an object
+    let count=0;
+    for (obj in student){
+      count++;
+    }
+    console.log("Total properties " + count);
+    
+    //check if property exists
+     let check=prompt("Enter a key to check");
+     if(check in student){
+      console.log("exists");
+     }
+    else{
+      console.log("does not exists");
+    } 
+
+    let found =false;
+    for(obj in student){
+      if(obj === "name"){
+        found=true;
+        break;
+      }
+    }
+    if(found){
+      console.log("property exists");
+    }
+    else{
+      console.log("Does not exist");
+      
+    }
+
+  </script>
+</body>
+</html>

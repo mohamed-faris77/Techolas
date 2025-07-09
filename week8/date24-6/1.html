@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = parseInt(
+        prompt("Enter a number to check whether it is prime or not")
+      );
+      let isPrime = true;
+
+      if (input === 1) {
+        console.log("1 is not a prime number nor composite number");
+      } else if (input < 1) {
+        console.log("The entered number is negative and not a prime number");
+      } else {
+        for (let i = 2; i < input; i++) {
+          if (input % i === 0) {
+            isPrime = false;
+            break; // no need to check further
+          }
+        }
+
+        if (isPrime) {
+          console.log(input + " is a prime number");
+        } else {
+          console.log(input + " is not a prime number");
+        }
+      }
+    </script>
+  </body>
+</html>

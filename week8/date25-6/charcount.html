@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Write a JavaScript program to count how many times each character appears in a given string.
+    let name=prompt("Enter a string to count its each characters")
+    let letter_count = {};
+    for(let k of name){
+    if (letter_count[k]){
+     letter_count[k]++;
+    }
+   else {
+    letter_count[k]=1;
+   }
+ }
+//  for(let i in letter_count)
+//   console.log(i +":" +letter_count[i]);
+
+for (let i in letter_count){
+  console.log(i,':', letter_count[i]);
+  
+}
+  </script>
+</body>
+</html>

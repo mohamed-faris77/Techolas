@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Count vowels&consonants</title>
+</head>
+<body>
+  <script>
+    let inputStr=prompt("eter a string to count it vowels and consonants");
+    let vowelcount=0;
+    let consonantcount=0;
+
+    inputStr=inputStr.toLowerCase();
+
+    for(i=0;i<inputStr.length;i++){
+      let ch=inputStr[i];
+
+      if(ch>='a'&&ch<='z'){
+        if('aeiou'.includes(ch)){
+          vowelcount++;
+        }
+        else{
+          consonantcount++;
+        }
+      }
+    }
+
+    console.log("Vowels : "+ vowelcount);
+    console.log("Consonants : "+ consonantcount);
+    
+    
+  </script>
+
+</body>
+</html>

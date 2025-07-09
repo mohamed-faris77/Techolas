@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SumOfPrime</title>
+</head>
+<body>
+  <script>
+     let input = parseInt(prompt("Enter a number to check ehether it is prime or not "));
+     let count=0;
+
+      if (input === 1) {
+        console.log("1 is not a prime number nor composite number");
+      } else if (input >= 2) {
+        for (let i = 2; i < input; i++) {
+          if (input % i == 0) {
+            console.log("not a prime number");
+            break;
+          } else {
+            
+            console.log("prime number");
+            break;
+          }
+        }
+      } else {
+        console.log("The entered number is negative and not a prime number");
+      }
+  </script>
+</body>
+</html>

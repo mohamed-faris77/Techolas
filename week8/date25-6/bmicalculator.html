@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+</head>
+<body>
+  <script>
+    let height=parseFloat(prompt("Enter your height in meters "))
+    let weight=parseFloat(prompt("Enter your weight in kilograms"))
+
+    let bmi = weight/(height*height);
+    console.log("Your Bmi is" +bmi);
+
+    /* 
+    Underweight: BMI less than 18.5
+    Normal/Healthy Weight: BMI between 18.5 and 24.9
+    Overweight: BMI between 25 and 29.9
+    Obesity: BMI of 30 or higher */
+
+    if(bmi<18.5){
+      console.log("You are Underweight");
+    }
+    else if(bmi>=18.5&&bmi<=24.9){
+      console.log("You are healthier");
+    }
+    else if(bmi>=25&&bmi<=29.9){
+      console.log("You are over weight");
+    }
+    else{
+      console.log("You are Obese ");
+      
+    }
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let inp1=parseInt(prompt("Enter number 1 to perform operation"))
+    let inp2=parseInt(prompt("Enter number 2 to perform operation"))
+    let option=prompt("Select an operation - type  1 for addition, 2 for subtraction, 3 for multiplication, 4 for division ")
+
+    switch (option) {
+      case "1":
+        console.log("The sum of "+inp1+" and " +inp2+" is : " ,inp1+inp2);
+        break;
+      case "2":
+        console.log("The difference of "+inp1+" and " +inp2+" is : " ,inp1-inp2);
+        break;
+      case "3":
+        console.log("The multiplication of "+inp1+" and " +inp2+" is : " ,inp1*inp2);
+        break;
+      case "4":
+        console.log("The division of "+inp1+" and " +inp2+" is : " ,inp1/inp2);
+        break;
+    
+      default:
+        console.log("Enter the correct option 1,2,3,4");
+        
+        break;
+    }
+  </script>
+</body>
+</html>

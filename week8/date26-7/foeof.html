@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  //    let colors=["red","Blue","Green"];
+  // for(let color of colors){
+  //   console.log(color); 
+  // }
+  // let words="hello";
+  // for(let char of words){
+  //   console.log(char); 
+  // }
+
+
+  //For each
+  let students=["Faris", "Adhil", "Amisha", "Shravari"]
+  function greet(name) {
+    console.log("Hello "+ name + " !");
+  }
+  students.forEach(greet);
+
+let scores=[10,20,30,40];
+let total=0;
+
+scores.forEach(addTotal);
+
+function addTotal(scores) {
+  total=total+scores;
+}
+
+console.log(total);
+
+  </script>
+ 
+</body>
+</html>

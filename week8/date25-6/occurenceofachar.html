@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Occurence of a char</title>
+</head>
+<body>
+  <script>
+    let inputStr=prompt("Enter a string to count a specific occurence of a character ")
+    let inputChar=prompt("Enter a character to check its occurence ")
+    let count=0;
+
+    for(let i=0;i<inputStr.length;i++){
+      if(inputStr[i]===inputChar){
+        count++
+      }
+    }
+    document.write("Count : " + count);
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remove duplicate</title>
+</head>
+<body>
+  <script>
+    let input=prompt("Enter a string to check the duplicate characers ")
+    let result="";
+
+    for(let i=0;i<input.length;i++){
+      if(!result.includes(input[i])){
+        result=result+input[i];
+      }
+    }
+    console.log("Entered string : " + input );
+    console.log(" Without Duplicates : " + result);
+    
+  </script>
+</body>
+</html>

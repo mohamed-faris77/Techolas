@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fibonacci series</title>
+</head>
+<body>
+  <script>
+    let inp=parseInt(prompt("Enter a input to count the fibonacci series :"))
+
+    let a=0;
+    let b=1;
+    let c;
+
+    for(let i=1;i<=inp;i++){
+      console.log(a);
+      c=a+b;
+      a=b;
+      b=c;
+    }
+  </script>
+</body>
+</html>

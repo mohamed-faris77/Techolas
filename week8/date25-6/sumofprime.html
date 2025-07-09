@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sum Of Prime</title>
+</head>
+<body>
+  <script>
+    let input=parseInt(prompt("Enter the n th prime number"));
+    let sum=0;
+    
+   
+   if(input<2){
+    console.log("There is no number under 2 that is prime number");
+   }
+   else{
+    for(num=2;num<=input;num++){
+      //let isPrime=true;
+      let isPrime=true;
+      for(i=2;i<num;i++){
+        if(num%i===0){
+          isPrime=false;
+          break;
+        }
+      }
+      if(isPrime){
+        console.log(num);
+        sum=sum+num;
+      }
+    }
+    console.log("sum of prime numbers is "+ sum);
+    
+   }
+  </script>
+</body>
+</html>
