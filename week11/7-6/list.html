@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        width: 200px;
+        height: 70px;
+      }
+      button {
+        width: 100px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="inp" />
+    <button id="add" onclick="additem()">ADD ITEM</button>
+    <ul id="itemList"></ul>
+    <button onclick="clearLI()">CLEAR</button>
+    <script>
+      function additem() {
+        var input = document.getElementById("inp");
+        var inputs = document.getElementById("inp").value;
+        var li = document.createElement("li");
+        li.textContent = inputs;
+        document.getElementById("itemList").appendChild(li);
+        input.value("");
+      }
+
+      function clearLI(){
+        let clearLi = document.getElementById("itemList")
+        clearLi.innerHTML=""
+      }
+
+    </script>
+  </body>
+</html>
