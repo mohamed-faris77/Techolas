@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }  */
+
+      .completed {
+        color: grey;
+        text-decoration: line-through;
+      }
+      .button {
+        color: white;
+        border: none;
+        background-color: red;
+        border-radius: 5px;
+      }
+      #inp {
+        width: 300px;
+        height: 50px;
+        color: grey;
+        display: block;
+      }
+      .buttu {
+        width: 125px;
+        border-radius: 5px;
+        color: brown;
+        background-color: bisque;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="inp" />
+    <button onclick="addList()" class="buttu">Add</button>
+    <button onclick="clearList()" class="buttu">Clear</button>
+
+    <ul id="liItems"></ul>
+    <script>
+      let inpTxt = document.getElementById("inp");
+      let listItems = document.getElementById("liItems");
+
+      function addList() {
+        if (inpTxt.value == "") {
+          alert("Please enter a task ");
+          return;
+        }
+
+        let liItem = document.createElement("li");
+        liItem.textContent = inpTxt.value;
+        listItems.appendChild(liItem);
+
+        liItem.onclick = function () {
+        liItem.classList.toggle("completed");
+        };
+
+        let btn = document.createElement("button");
+        btn.textContent = "Delete";
+        btn.className = "button";
+        btn.onclick = function () {
+        liItem.remove();
+        };
+        liItem.appendChild(btn);
+      }
+
+      document.addEventListener("keydown", function (even) {
+        handleKey(even.key);
+      });
+      function handleKey(key) {
+        if (key === "Enter") addList();
+      }
+
+      function clearList() {
+        listItems.innerHTML = "";
+      }
+    </script>
+  </body>
+</html>
