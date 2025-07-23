@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px;
+      }
+      .frm {
+        border: solid black 1px;
+        width: 350px;
+        height: max-content;
+        padding: 50px;
+        background-color: rgb(250, 205, 205);
+        border-radius: 15px;
+        border: none;
+        box-shadow: grey 5px 5px 5px;
+        color: rgb(136, 14, 0);
+      }
+      input {
+        margin: 10px;
+        width: 100%;
+        height: 50px;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      #btn {
+        width: 80px;
+        color: white;
+        border: none;
+        background-color: rgb(111, 111, 254);
+        cursor: pointer;
+      }
+      .error {
+        color: red;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frm">
+      <form>
+        <h1>Register</h1>
+        <input type="text" placeholder="Name" id="name" />
+        <div id="nameError" class="error"></div>
+        <input type="email" placeholder="Email" id="email" />
+        <div id="emailError" class="error"></div>
+        <input type="password" placeholder="Password(min 6 chars)" id="pass" />
+        <div id="passError" class="error"></div>
+        <input type="password" placeholder="Confirm Password" id="cpass" />
+        <div id="cpassError" class="error"></div>
+        <div style="text-align: center">
+          <input type="button" value="Submit" onclick="validate()" id="btn" />
+        </div>
+      </form>
+    </div>
+
+    <script>
+      let userName = document.getElementById("name");
+      let userEmail = document.getElementById("email");
+      let userPass = document.getElementById("pass");
+      let userCpass = document.getElementById("cpass");
+      let nameError = document.getElementById("nameError");
+      let emailError = document.getElementById("emailError");
+      let passError = document.getElementById("passError");
+      let cpassError = document.getElementById("cpassError");
+
+      function validate() {
+        nameError.textContent = "";
+        emailError.textContent = "";
+        passError.textContent = "";
+        cpassError.textContent = "";
+        let valid = true;
+
+        if (userName.value.trim() === "") {
+          nameError.textContent = "Name is required";
+          valid = false;
+        }
+        if (userEmail.value.trim() === "") {
+          emailError.textContent = "Email is required";
+          valid = false;
+        } else if (!userEmail.checkValidity()) {
+          emailError.textContent = "Enter the correct format of Email";
+          valid = false;
+        }
+        if (userPass.value.length < 6) {
+          passError.textContent = "Password must have minimum 6 characters";
+          valid = false;
+        }
+        if (userPass.value !== userCpass.value) {
+          cpassError.textContent = "Password must match";
+          valid = false;
+        }
+
+        if (valid) {
+          alert("Form submitted");
+        }
+      }
+    </script>
+  </body>
+</html>
