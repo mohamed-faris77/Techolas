@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      input,
+      select {
+        padding: 10px;
+        margin: 10px;
+      }
+      .frm {
+        border: solid black 1px;
+        width: max-content;
+        padding: 20px;
+        background-color: aliceblue;
+        border-radius: 15px;
+      }
+      h2 {
+        color: green;
+      }
+      button{
+        color: white;
+        background-color: rgb(101, 101, 252);
+        cursor: pointer;
+        border: none;
+        margin: 10px;
+        height: 40px;
+        width: 80px;
+        border-radius: 5px;
+      }
+      .error{
+        color: red;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frm">
+      <form>
+        <h2>Student Registration</h2>
+        <input type="text" id="fName" placeholder="Full Name" />
+        <div id="fNameError" class="error"></div>
+        <input type="email" id="mailId" placeholder="Email" />
+        <div id="mailIdError" class="error"></div>
+        <input type="tel" id="pNum" placeholder="Mobile Number" pattern="[0-9]{10}"/>
+        <div id="pNumError" class="error"></div>
+        <select name="gender" id="woMen">
+          <option value="" disabled selected>Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <div id="woMenError" class="error"></div>
+        <input type="date" aria-label="Date of birth" id="dob" />
+        <div id="dobError" class="error"></div>
+        <input type="text" id="address" placeholder="Permanent address" />
+        <div id="addressError" class="error"></div>
+        <input
+          type="password"
+          id="pass"
+          placeholder="Password (min 6 characters)"
+        />
+        <div id="passError" class="error"></div>
+        <select name="course" id="course">
+          <option value="" disabled selected>Select Course</option>
+          <option value="mern">MERN</option>
+          <option value="python">Python</option>
+          <option value="data-analytics">Data Analytics</option>
+        </select>
+        <div id="courseError" class="error"></div>
+        <input
+          type="text"
+          id="qual"
+          placeholder="Latest Educational Qualification "
+        />
+        <div id="qualError" class="error"></div>
+        <button onclick="validate(event)">Submit</button>
+      </form>
+    </div>
+    <script>
+      let fName = document.getElementById("fName");
+      let fNameError = document.getElementById("fNameError");
+      let mailId = document.getElementById("mailId");
+      let mailIdError = document.getElementById("mailIdError");
+      let pNum = document.getElementById("pNum");
+      let pNumError = document.getElementById("pNumError");
+      let woMen = document.getElementById("woMen");
+      let woMenError = document.getElementById("woMenError");
+      let dob = document.getElementById("dob");
+      let dobError = document.getElementById("dobError");
+      let address = document.getElementById("address");
+      let addressError = document.getElementById("addressError");
+      let pass = document.getElementById("pass");
+      let passError = document.getElementById("passError");
+      let course = document.getElementById("course");
+      let courseError = document.getElementById("courseError");
+      let qual = document.getElementById("qual");
+      let qualError = document.getElementById("qualError");
+
+      let valid=true;
+
+      function validate(event) {
+        event.preventDefault();
+
+        fNameError.textContent = "";
+        mailIdError.textContent = "";
+        pNumError.textContent = "";
+        woMenError.textContent = "";
+        dobError.textContent = "";
+        addressError.textContent = "";
+        passError.textContent = "";
+        courseError.textContent = "";
+        qualError.textContent = "";
+
+        if (fName.value.trim() == "" || fName.value.length < 3) {
+          fNameError.textContent = "Please Enter Your Full Name";
+          valid = false;
+        }
+        if (mailId.value.trim() === "") {
+          mailIdError.textContent = "Enter Your Email Id";
+          valid = false;
+        } else if (!mailId.checkValidity()) {
+          mailIdError.textContent = "Enter a valid Email Id ";
+          valid = false;
+        }
+        if (pNum.value.trim() === "") {
+          pNumError.textContent = "Enter Your Phone Number ";
+          valid = false;
+        } else if (!pNum.checkValidity()) {
+          pNumError.textContent = "Enter a valid 10-digit phone number ";
+          valid = false;
+        }
+        if (woMen.value === "") {
+          woMenError.textContent = "Select your gender";
+          valid = false;
+        }
+        if (dob.value === "") {
+          dobError.textContent = "Select your Date of Birth";
+          valid = false;
+        }
+        if (address.value.trim() === "") {
+          addressError.textContent = "Please Enter Your address";
+          valid = false;
+        }
+        if (pass.value.trim() === "") {
+          passError.textContent = "Enter the password";
+          valid = false;
+        } else if (pass.value.length < 6) {
+          passError.textContent = "Pass word length should be minimum 6";
+          valid = false;
+        }
+        if (course.value === "") {
+          courseError.textContent = "Select your Course";
+          valid = false;
+        }
+        if (qual.value.trim() === "") {
+          qualError.textContent = "Enter your Qualification";
+          valid = false;
+        }
+
+        if (valid) {
+          alert("Submitted❤️");
+        }
+      }
+    </script>
+  </body>
+</html>
