@@ -59,14 +59,15 @@ Each folder contains:
  **Clone the repository**
   git clone https://github.com/mohamed-faris77/Techolas.git
 
-👨‍💻 Author
-Mohamed Faris
-🌍 Gudalur, Tamil Nadu
-🔗 https://github.com/mohamed-faris77
+-👨‍💻 Author
+-Mohamed Faris
+-🌍 Gudalur, Tamil Nadu
+-🔗 https://github.com/mohamed-faris77
 
-📫 Contact
-Email: mohmdfaris.k@gmail.com
-LinkedIn: linkedin.com/in/mohmd-faris
-GitHub: mohamed-faris77
+---
+-📫 Contact
+-Email: mohmdfaris.k@gmail.com
+
+---
 
 
